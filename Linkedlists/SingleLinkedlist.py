@@ -17,15 +17,28 @@ class LinkedList:
         else:
             self.head = new_node
     def PrintList(self):
+        if(self.head):
+            current = self.head
+            while(current):
+                print(current.data)
+                current = current.next
+        else:
+            print("List is empty")
+    def delete_last_node(self):
         current = self.head
-        while(current.next):
-            print(current.data)
+        while(current.next != None):
             current = current.next
+        current.next = None
+        
         
 list1 = LinkedList()
-list1.head = node1
+list1.append_node(1)
 list1.append_node(3)
 list1.append_node(4)
-
+list1.append_node(5)
 list1.PrintList()
+
+
+
+
 
